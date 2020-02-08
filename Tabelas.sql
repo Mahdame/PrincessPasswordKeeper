@@ -1,0 +1,17 @@
+CREATE TABLE senhas (
+  id INTEGER IDENTITY(1,1) NOT NULL ,
+  tipo NVARCHAR(50) NULL,
+  usuario NVARCHAR(50) NOT NULL,
+  senha NVARCHAR(50) NULL,
+  notas NVARCHAR(50) NULL,
+  PRIMARY KEY(id),
+)
+
+CREATE TABLE usuarios (
+  id INTEGER IDENTITY(1,1) NOT NULL ,
+  usuario NVARCHAR(50) UNIQUE NOT NULL,
+  senha NVARCHAR(50) NOT NULL,
+  PRIMARY KEY(id),
+)
+
+drop table senhas
